@@ -1,11 +1,4 @@
 fn main() {
-    let mut result = 0;
-
-    for i in 1..1000 {
-        if i % 3 == 0 || i % 5 == 0 {
-            result += i;
-        }
-    }
-
-    print!("{}", result);
+    let result: i32 = (1..1000).filter(|i| i % 3 == 0 || i % 5 == 0).sum();
+    println!("{}", result);
 }
