@@ -7,7 +7,7 @@ pub struct Fib {
 impl Fib {
     pub fn new() -> Fib {
         Fib {
-            i: 1,
+            i: 0,
             previous: 0,
             current: 1,
         }
