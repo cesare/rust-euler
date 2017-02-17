@@ -7,4 +7,8 @@ authors = ["SAWADA Tadashi <cesare@mayverse.jp>"]
 name = "problem_001"
 path = "src/problem_001.rs"
 
+[[bin]]
+name = "problem_002"
+path = "src/problem_002.rs"
+
 [dependencies]
