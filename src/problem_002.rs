@@ -26,8 +26,41 @@ impl Iterator for Fib {
     }
 }
 
+
+pub struct EvenFib {
+    i: u32,
+    previous: u32,
+    current: u32,
+}
+
+impl EvenFib {
+    pub fn new() -> EvenFib {
+        EvenFib {
+            i: 0,
+            previous: 2,
+            current: 0,
+        }
+    }
+}
+
+impl Iterator for EvenFib {
+    type Item = u32;
+
+    fn next(&mut self) -> Option<u32> {
+        let next = self.previous + self.current * 4;
+        self.i += 1;
+        self.previous = self.current;
+        self.current = next;
+        Some(next)
+    }
+}
+
 fn main() {
     let fib = Fib::new();
-    let result: u64 = fib.take_while(|n| *n < 4_000_000u64).filter(|n| n % 2 == 0).sum();
-    println!("{}", result);
+    let result_fib: u64 = fib.take_while(|n| *n < 4_000_000u64).filter(|n| n % 2 == 0).sum();
+
+    let evenfib = EvenFib::new();
+    let result_evenfib: u32 = evenfib.take_while(|n| *n < 4_000_000u32).sum();
+
+    println!("fib={}, evenfib={}", result_fib, result_evenfib);
 }
