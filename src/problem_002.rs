@@ -67,16 +67,12 @@ fn even_fibs() -> Vec<u32> {
     fibs.collect()
 }
 
-fn to_string(ns: &Vec<u32>) -> String {
-    ns.iter().map(|n| n.to_string()).collect::<Vec<String>>().join(", ")
-}
-
 fn main() {
     let fs1 = fibs();
     let fs1sum: u32 = fs1.iter().sum();
-    println!("naive fibs: {} -> {}", to_string(&fs1), fs1sum);
+    println!("naive fibs: {:?} -> {}", fs1, fs1sum);
 
     let fs2 = even_fibs();
     let fs2sum: u32 = fs2.iter().sum();
-    println!(" even fibs: {} -> {}", to_string(&fs2), fs2sum);
+    println!(" even fibs: {:?} -> {}", fs2, fs2sum);
 }
