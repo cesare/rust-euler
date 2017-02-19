@@ -55,12 +55,28 @@ impl Iterator for EvenFib {
     }
 }
 
-fn main() {
+fn fibs() -> Vec<u32> {
     let fib = Fib::new();
-    let result_fib: u32 = fib.take_while(|n| *n < 4_000_000u32).filter(|n| n % 2 == 0).sum();
+    let fibs = fib.take_while(|n| *n < 4_000_000u32).filter(|n| n % 2 == 0);
+    fibs.collect()
+}
 
-    let evenfib = EvenFib::new();
-    let result_evenfib: u32 = evenfib.take_while(|n| *n < 4_000_000u32).sum();
+fn even_fibs() -> Vec<u32> {
+    let fib = EvenFib::new();
+    let fibs = fib.take_while(|n| *n < 4_000_000u32);
+    fibs.collect()
+}
 
-    println!("fib={}, evenfib={}", result_fib, result_evenfib);
+fn main() {
+    let fs1 = fibs();
+    let fs1sum: u32 = fs1.iter().sum();
+    println!("naive fibs: {} -> {}",
+             fs1.iter().map(|n| n.to_string()).collect::<Vec<String>>().join(", "),
+             fs1sum);
+
+    let fs2 = even_fibs();
+    let fs2sum: u32 = fs2.iter().sum();
+    println!("even fibs : {} -> {}",
+             fs2.iter().map(|n| n.to_string()).collect::<Vec<String>>().join(", "),
+             fs2sum);
 }
