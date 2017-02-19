@@ -1,7 +1,7 @@
 pub struct Fib {
-    i: u64,
-    previous: u64,
-    current: u64,
+    i: u32,
+    previous: u32,
+    current: u32,
 }
 
 impl Fib {
@@ -15,9 +15,9 @@ impl Fib {
 }
 
 impl Iterator for Fib {
-    type Item = u64;
+    type Item = u32;
 
-    fn next(&mut self) -> Option<u64> {
+    fn next(&mut self) -> Option<u32> {
         let next = self.previous + self.current;
         self.i += 1;
         self.previous = self.current;
@@ -57,7 +57,7 @@ impl Iterator for EvenFib {
 
 fn main() {
     let fib = Fib::new();
-    let result_fib: u64 = fib.take_while(|n| *n < 4_000_000u64).filter(|n| n % 2 == 0).sum();
+    let result_fib: u32 = fib.take_while(|n| *n < 4_000_000u32).filter(|n| n % 2 == 0).sum();
 
     let evenfib = EvenFib::new();
     let result_evenfib: u32 = evenfib.take_while(|n| *n < 4_000_000u32).sum();
