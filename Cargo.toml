@@ -11,4 +11,8 @@ path = "src/problem_001.rs"
 name = "problem_002"
 path = "src/problem_002.rs"
 
+[[bin]]
+name = "problem_003_largest_prime_factor"
+path = "src/problem_003_largest_prime_factor.rs"
+
 [dependencies]
