@@ -15,4 +15,8 @@ path = "src/problem_002.rs"
 name = "problem_003_largest_prime_factor"
 path = "src/problem_003_largest_prime_factor.rs"
 
+[[bin]]
+name = "problem_004_largest_palindrome_product"
+path = "src/problem_004_largest_palindrome_product.rs"
+
 [dependencies]
