@@ -23,4 +23,8 @@ path = "src/problem_004_largest_palindrome_product.rs"
 name = "problem_005_smallest_multiple"
 path = "src/problem_005_smallest_multiple.rs"
 
+[[bin]]
+name = "problem_006_sum_square_difference"
+path = "src/problem_006_sum_square_difference.rs"
+
 [dependencies]
