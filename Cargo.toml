@@ -27,4 +27,8 @@ path = "src/problem_005_smallest_multiple.rs"
 name = "problem_006_sum_square_difference"
 path = "src/problem_006_sum_square_difference.rs"
 
+[[bin]]
+name = "problem_007_10001st_prime"
+path = "src/problem_007_10001st_prime.rs"
+
 [dependencies]
