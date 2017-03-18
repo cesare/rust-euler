@@ -31,4 +31,8 @@ path = "src/problem_006_sum_square_difference.rs"
 name = "problem_007_10001st_prime"
 path = "src/problem_007_10001st_prime.rs"
 
+[[bin]]
+name = "problem_008_largest_product"
+path = "src/problem_008_largest_product.rs"
+
 [dependencies]
