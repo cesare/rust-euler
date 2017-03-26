@@ -35,4 +35,8 @@ path = "src/problem_007_10001st_prime.rs"
 name = "problem_008_largest_product"
 path = "src/problem_008_largest_product.rs"
 
+[[bin]]
+name = "problem_010_summation_of_primes"
+path = "src/problem_010_summation_of_primes.rs"
+
 [dependencies]
